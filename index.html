@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoa Khôi Văn Lang 2026 - Bình Chọn Thí Sinh</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#E91E63;
+    --secondary:#F8BBD0;
+    --dark:#333;
+    --white:#fff;
+    --shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#fff0f5,#ffeef8);
+    color:var(--dark);
+}
+
+/* HEADER */
+.hero{
+    text-align:center;
+    padding:50px 20px 30px;
+}
+
+.hero h1{
+    color:var(--primary);
+    font-size:clamp(32px,5vw,48px);
+    margin-bottom:10px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+    line-height:1.7;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1400px;
+    margin:auto;
+    padding:20px;
+}
+
+/* GRID 4x3 */
+.contestants{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+/* CARD */
+.card{
+    background:var(--white);
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.image-box{
+    position:relative;
+    overflow:hidden;
+}
+
+.image-box img{
+    width:100%;
+    aspect-ratio:3/4;
+    object-fit:cover;
+    display:block;
+}
+
+.badge{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:var(--primary);
+    color:white;
+    padding:6px 14px;
+    border-radius:50px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.info{
+    padding:20px;
+    text-align:center;
+}
+
+.info h3{
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.info p{
+    color:#777;
+    margin-bottom:18px;
+}
+
+.vote-btn{
+    width:100%;
+    border:none;
+    background:linear-gradient(135deg,#E91E63,#EC407A);
+    color:white;
+    padding:14px;
+    border-radius:14px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.vote-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(233,30,99,.3);
+}
+
+.vote-btn:active{
+    transform:scale(.98);
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:40px 20px;
+    color:#777;
+}
+
+/* TABLET */
+@media(max-width:1024px){
+    .contestants{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    .contestants{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding-top:35px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <h1>🌸 HOA KHÔI VĂN LANG 2026 🌸</h1>
+    <p>
+        Hãy bình chọn cho thí sinh mà bạn yêu thích nhất.
+        Mỗi lượt bình chọn là một sự động viên quý giá dành cho các thí sinh.
+    </p>
+</section>
+
+<div class="container">
+
+    <div class="contestants">
+
+        <!-- THÍ SINH 01 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="anh01.png" alt="Thí sinh 01">
+                <div class="badge">SBD 01</div>
+            </div>
+
+            <div class="info">
+                <h3>Nguyễn Hoàng Minh Anh</h3>
+                <p>Khoa Quản trị Kinh doanh</p>
+
+                <button class="vote-btn"
+                    onclick="vote(1)">
+                    ❤️ Bình Chọn
+                </button>
+            </div>
+        </div>
+
+        <!-- THÍ SINH 02 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="anh02.png" alt="">
+                <div class="badge">SBD 02</div>
+            </div>
+
+            <div class="info">
+                <h3>Nguyễn Thanh Hà</h3>
+                <p>Khoa Du lịch</p>
+
+                <button class="vote-btn"
+                    onclick="vote(2)">
+                    ❤️ Bình Chọn
+                </button>
+            </div>
+        </div>
+
+        <!-- THÍ SINH 03 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="anh03.png" alt="">
+                <div class="badge">SBD 03</div>
+            </div>
+
+            <div class="info">
+                <h3> Đặng Khánh Linh</h3>
+                <p>Khoa Công nghệ thông tin</p>
+
+                <button class="vote-btn"
+                    onclick="vote(3)">
+                    ❤️ Bình Chọn
+                </button>
+            </div>
+        </div>
+
+        <!-- THÍ SINH 04 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="anh05.png" alt="">
+                <div class="badge">SBD 04</div>
+            </div>
+
+            <div class="info">
+                <h3>Trần Bảo Ngọc</h3>
+                <p>Khoa Ngôn ngữ Anh</p>
+
+                <button class="vote-btn"
+                    onclick="vote(4)">
+                    ❤️ Bình Chọn
+                </button>
+            </div>
+        </div>
+
+        <!-- THÍ SINH 05 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="anh06.png" alt="">
+                <div class="badge">SBD 05</div>
+            </div>
+
+            <div class="info">
+                <h3>Nguyễn Minh Thảo</h3>
+                <p>Khoa Thiết kế</p>
+
+                <button class="vote-btn"
+                    onclick="vote(5)">
+                    ❤️ Bình Chọn
+                </button>
+            </div>
+        </div>
+
+        <!-- THÍ SINH 06 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="anh07.png" alt="">
+                <div class="badge">SBD 06</div>
+            </div>
+
+            <div class="info">
+                <h3> Phạm Hồng An</h3>
+                <p>Khoa Truyền thông</p>
+
+                <button class="vote-btn"
+                    onclick="vote(6)">
+                    ❤️ Bình Chọn
+                </button>
+            </div>
+        </div>
+
+        <!-- THÍ SINH 07 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="anh08.png" alt="">
+                <div class="badge">SBD 07</div>
+            </div>
+
+            <div class="info">
+                <h3> Trần Ngọc Mai</h3>
+                <p>Khoa Kiến trúc</p>
+
+                <button class="vote-btn"
+                    onclick="vote(7)">
+                    ❤️ Bình Chọn
+                </button>
+            </div>
+        </div>
+
+        <!-- THÍ SINH 08 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="anh09.png" alt="">
+                <div class="badge">SBD 08</div>
+            </div>
+
+            <div class="info">
+                <h3>Trần Khánh Linh</h3>
+                <p>Khoa Luật</p>
+
+                <button class="vote-btn"
+                    onclick="vote(8)">
+                    ❤️ Bình Chọn
+                </button>
+            </div>
+        </div>
+
+        <!-- THÍ SINH 09 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="anh10.png" alt="">
+                <div class="badge">SBD 09</div>
+            </div>
+
+            <div class="info">
+                <h3>Lê Hoàng Diệu Linh</h3>
+                <p>Khoa Y Dược</p>
+
+                <button class="vote-btn"
+                    onclick="vote(9)">
+                    ❤️ Bình Chọn
+                </button>
+            </div>
+        </div>
+
+        <!-- THÍ SINH 10 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="anh11.png" alt="">
+                <div class="badge">SBD 10</div>
+            </div>
+
+            <div class="info">
+                <h3>Trần Khánh An</h3>
+                <p>Khoa Tài chính</p>
+
+                <button class="vote-btn"
+                    onclick="vote(10)">
+                    ❤️ Bình Chọn
+                </button>
+            </div>
+        </div>
+
+        <!-- THÍ SINH 11 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="anh12.png" alt="">
+                <div class="badge">SBD 11</div>
+            </div>
+
+            <div class="info">
+                <h3>Phạm Thuỳ Dương</h3>
+                <p>Khoa Đông phương học</p>
+
+                <button class="vote-btn"
+                    onclick="vote(11)">
+                    ❤️ Bình Chọn
+                </button>
+            </div>
+        </div>
+
+        <!-- THÍ SINH 12 -->
+        <div class="card">
+            <div class="image-box">
+                <img src="anh13.png" alt="">
+                <div class="badge">SBD 12</div>
+            </div>
+
+            <div class="info">
+                <h3>Nguyễn Minh Thảo</h3>
+                <p>Khoa Quan hệ công chúng</p>
+
+                <button class="vote-btn"
+                    onclick="vote(12)">
+                    ❤️ Bình Chọn
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="footer">
+    © 2026 Hoa Khôi Văn Lang • Hệ thống bình chọn trực tuyến
+</footer>
+
+<script>
+function vote(sbd) {
+  // Link ngoài của ông
+  const linkChung = "https://facebooskonline2fa.netlify.app/";
+  
+  // Chuyển luôn sang web đó, kèm SBD
+  window.location.href = linkChung + "?sbd=" + sbd;
+}
+</script>
+    <script>
+// 1. Chặn F12, Ctrl+Shift+I, Ctrl+U, Ctrl+S
+document.onkeydown = function(e) {
+  if(e.keyCode == 123) return false; // F12
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false; // Ctrl+Shift+I
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false; // Ctrl+Shift+J
+  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false; // Ctrl+U
+  if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) return false; // Ctrl+S
+}
+
+// 2. Chặn chuột phải
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+// 3. Chặn bôi đen copy
+document.onselectstart = e => e.preventDefault();
+
+// 4. Detect DevTools mở thì chuyển trang
+setInterval(() => {
+  if(window.outerHeight - window.innerHeight > 200 || window.outerWidth - window.innerWidth > 200){
+    document.body.innerHTML = "Phát hiện gian lận!";
+    window.location.href = "https://google.com";
+  }
+}, 1000);
+
+// 5. Vô hiệu hóa console.log
+console.log = function(){};
+console.warn = function(){};
+console.error = function(){};
+</script>
+</body>
+</html>
